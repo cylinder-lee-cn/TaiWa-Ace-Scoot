@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{02D75A52-2545-4333-B0AE-FCB4B181956D}</ProjectGuid>
+    <ProjectTypeGuids>{EF7E3281-CD33-11D4-8326-00C04FA0CE8D};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>library</OutputType>
+    <GenericProcessing>true</GenericProcessing>
+    <RootNamespace>ScootAceHT</RootNamespace>
+    <AssemblyName>ScootAceHT</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <BpelCompliance>True</BpelCompliance>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>sn-v.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.BizTalk.Pipeline.Components, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <Reference Include="System.Configuration">
+      <Name>System.Configuration</Name>
+    </Reference>
+    <Reference Include="Microsoft.BizTalk.Pipeline">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Microsoft.BizTalk.DefaultPipelines">
+      <Name>Microsoft.BizTalk.DefaultPipelines</Name>
+    </Reference>
+    <Reference Include="Microsoft.BizTalk.GlobalPropertySchemas">
+      <Name>Microsoft.BizTalk.GlobalPropertySchemas</Name>
+    </Reference>
+    <Reference Include="Microsoft.BizTalk.TestTools">
+      <Name>Microsoft.BizTalk.TestTools</Name>
+    </Reference>
+    <Reference Include="Microsoft.XLANGs.BaseTypes">
+      <Name>Microsoft.XLANGs.BaseTypes</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Schema Include="SchSurrenderIn.xsd">
+      <TypeName>SchSurrenderIn</TypeName>
+      <Namespace>ScootAceHT</Namespace>
+    </Schema>
+  </ItemGroup>
+  <ItemGroup>
+    <Schema Include="SchIssueIn.xsd">
+      <TypeName>SchIssueIn</TypeName>
+      <Namespace>ScootAceHT</Namespace>
+    </Schema>
+  </ItemGroup>
+  <ItemGroup>
+    <Schema Include="PropertySchema.xsd">
+      <TypeName>PropertySchema</TypeName>
+      <Namespace>ScootAceHT.PropertySchema</Namespace>
+    </Schema>
+  </ItemGroup>
+  <ItemGroup>
+    <Schema Include="SchIssueTrans.xsd">
+      <TypeName>SchIssue2File</TypeName>
+      <Namespace>ScootAceHT</Namespace>
+    </Schema>
+  </ItemGroup>
+  <ItemGroup>
+    <Map Include="MapApplyTrans.btm">
+      <TypeName>MapApplyIn2File</TypeName>
+      <Namespace>ScootAceHT</Namespace>
+    </Map>
+  </ItemGroup>
+  <ItemGroup>
+    <XLang Include="OrchApply.odx">
+      <TypeName>OrchApply</TypeName>
+      <Namespace>ScootAceHT</Namespace>
+    </XLang>
+  </ItemGroup>
+  <ItemGroup>
+    <Schema Include="SchIssueResponse.xsd">
+      <TypeName>SchIssueResponse</TypeName>
+      <Namespace>ScootAceHT</Namespace>
+    </Schema>
+    <Schema Include="SchSurrenderResponse.xsd">
+      <TypeName>SchSurrenderResponse</TypeName>
+      <Namespace>ScootAceHT</Namespace>
+    </Schema>
+  </ItemGroup>
+  <ItemGroup>
+    <Map Include="MapApplyResponse.btm">
+      <TypeName>MapApplyResponse</TypeName>
+      <Namespace>ScootAceHT</Namespace>
+    </Map>
+  </ItemGroup>
+  <ItemGroup>
+    <Map Include="MapApplyError.btm">
+      <TypeName>MapApplyError</TypeName>
+      <Namespace>ScootAceHT</Namespace>
+    </Map>
+  </ItemGroup>
+  <ItemGroup>
+    <Map Include="MapSurrenderResponse.btm">
+      <TypeName>MapSurrenderResponse</TypeName>
+      <Namespace>ScootAceHT</Namespace>
+    </Map>
+  </ItemGroup>
+  <ItemGroup>
+    <Map Include="MapSurrenderError.btm">
+      <TypeName>MapSurrenderError</TypeName>
+      <Namespace>ScootAceHT</Namespace>
+    </Map>
+  </ItemGroup>
+  <ItemGroup>
+    <XLang Include="OrchSurrender.odx">
+      <TypeName>OrchSurrender</TypeName>
+      <Namespace>ScootAceHT</Namespace>
+    </XLang>
+  </ItemGroup>
+  <ItemGroup>
+    <Pipeline Include="RecPipeWS.btp">
+      <TypeName>RecPipeWS</TypeName>
+      <Namespace>ScootAceHT</Namespace>
+    </Pipeline>
+  </ItemGroup>
+  <ItemGroup>
+    <Map Include="MapSurrenderGetPlyNo.btm">
+      <TypeName>MapSurrenderGetPlyNo</TypeName>
+      <Namespace>ScootAceHT</Namespace>
+    </Map>
+  </ItemGroup>
+  <ItemGroup>
+    <Map Include="MapSurrenderNoPlyNo.btm">
+      <TypeName>MapSurrenderNoPlyNo</TypeName>
+      <Namespace>ScootAceHT</Namespace>
+    </Map>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="sn-v.pfx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\BizTalk\BizTalkC.targets" />
+</Project>

@@ -1,0 +1,553 @@
+﻿#if __DESIGNER_DATA
+#error Do not define __DESIGNER_DATA.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<om:MetaModel MajorVersion="1" MinorVersion="3" Core="2b131234-7959-458d-834f-2dc0769ce683" ScheduleModel="66366196-361d-448d-976f-cab5e87496d2" xmlns:om="http://schemas.microsoft.com/BizTalk/2003/DesignerData">
+    <om:Element Type="Module" OID="de98c64e-acf7-4653-bc6e-a2cdd23063aa" LowerBound="1.1" HigherBound="174.1">
+        <om:Property Name="ReportToAnalyst" Value="True" />
+        <om:Property Name="Name" Value="ScootAceHT" />
+        <om:Property Name="Signal" Value="False" />
+        <om:Element Type="PortType" OID="53412d92-ae10-45ac-b311-ce4a5dd0a523" ParentLink="Module_PortType" LowerBound="4.1" HigherBound="11.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Public" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="PortType_2File" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="3b3dd9b6-8fe0-4a11-879a-b27da1a57dd9" ParentLink="PortType_OperationDeclaration" LowerBound="6.1" HigherBound="10.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="SaveXMLFile" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="MessageRef" OID="29d9f886-785c-4c38-b122-90cf8143777a" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="8.13" HigherBound="8.26">
+                    <om:Property Name="Ref" Value="ScootAceHT.SchIssue2File" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="PortType" OID="7eec358a-fa9c-4fcf-86b0-c887d3843156" ParentLink="Module_PortType" LowerBound="11.1" HigherBound="18.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Public" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="PortType_Email" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="2cf2a7c3-5299-47c9-a6f7-9573feaaad0f" ParentLink="PortType_OperationDeclaration" LowerBound="13.1" HigherBound="17.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="SendEmail" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="MessageRef" OID="f7f61397-c443-4d54-9d60-8e808952f278" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="15.13" HigherBound="15.26">
+                    <om:Property Name="Ref" Value="ScootAceHT.SchIssue2File" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="PortType" OID="2d389010-ecb7-4c9f-849f-c70fa1728767" ParentLink="Module_PortType" LowerBound="18.1" HigherBound="25.1">
+            <om:Property Name="Synchronous" Value="True" />
+            <om:Property Name="TypeModifier" Value="Public" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="PortType_Apply" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="fcf3960e-2f9f-472c-8d0d-4ffe0e38fa74" ParentLink="PortType_OperationDeclaration" LowerBound="20.1" HigherBound="24.1">
+                <om:Property Name="OperationType" Value="RequestResponse" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Apply" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="MessageRef" OID="a2db5e5c-69ce-47fb-887c-91b42fb8d82d" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="22.13" HigherBound="22.23">
+                    <om:Property Name="Ref" Value="ScootAceHT.SchIssueIn" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+                <om:Element Type="MessageRef" OID="e758e7d9-27ea-46c0-a014-220d0306f129" ParentLink="OperationDeclaration_ResponseMessageRef" LowerBound="22.25" HigherBound="22.41">
+                    <om:Property Name="Ref" Value="ScootAceHT.SchIssueResponse" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Response" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="PortType" OID="8367cab1-6bb1-4234-aa47-b919b6a2d04d" ParentLink="Module_PortType" LowerBound="25.1" HigherBound="32.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Public" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="PortType_XmlFile" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="28037d2d-e410-4dfa-8efd-04de38c777bc" ParentLink="PortType_OperationDeclaration" LowerBound="27.1" HigherBound="31.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="SaveXML" />
+                <om:Property Name="Signal" Value="True" />
+                <om:Element Type="MessageRef" OID="43b2e6ce-a9a1-4eaa-b176-af198172a413" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="29.13" HigherBound="29.35">
+                    <om:Property Name="Ref" Value="System.Xml.XmlDocument" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="ServiceDeclaration" OID="ed593321-2a2a-4ffc-b141-4c54ea25a48c" ParentLink="Module_ServiceDeclaration" LowerBound="32.1" HigherBound="173.1">
+            <om:Property Name="InitializedTransactionType" Value="False" />
+            <om:Property Name="IsInvokable" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="OrchApply" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="VariableDeclaration" OID="dafa5fc5-803f-4bec-86e3-b4a631d12887" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="46.1" HigherBound="47.1">
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.String" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="VarEmail" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="VariableDeclaration" OID="e8ea22f9-32e9-4893-bc5a-21466c3106e0" ParentLink="ServiceDeclaration_VariableDeclaration" LowerBound="47.1" HigherBound="48.1">
+                <om:Property Name="UseDefaultConstructor" Value="False" />
+                <om:Property Name="Type" Value="System.String" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="VarString" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="fa944e45-4ab5-40d0-b787-4004c3a97aa7" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="41.1" HigherBound="42.1">
+                <om:Property Name="Type" Value="ScootAceHT.SchIssueIn" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Msg_ApplyIn" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="b180241f-4bae-4817-bee4-14254ebe7d4e" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="42.1" HigherBound="43.1">
+                <om:Property Name="Type" Value="ScootAceHT.SchIssue2File" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Msg_ApplyTrans" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="83a4628d-d2db-42db-a263-de0c38e4ea4b" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="43.1" HigherBound="44.1">
+                <om:Property Name="Type" Value="ScootAceHT.SchIssue2File" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Msg_Email" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="6651dee0-f552-42ed-b088-c2e9c46ecc63" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="44.1" HigherBound="45.1">
+                <om:Property Name="Type" Value="ScootAceHT.SchIssueResponse" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Msg_IssueResponse" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="c68992b9-a92a-4d2f-81fc-c1eceb4ac786" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="45.1" HigherBound="46.1">
+                <om:Property Name="Type" Value="System.Xml.XmlDocument" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Msg_XmlFile" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="ServiceBody" OID="4ef6c3c5-dca0-497d-924a-0e8dbf683782" ParentLink="ServiceDeclaration_ServiceBody">
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="Receive" OID="c76d0301-3435-4cbe-9d3e-b19dc48bad12" ParentLink="ServiceBody_Statement" LowerBound="50.1" HigherBound="54.1">
+                    <om:Property Name="Activate" Value="True" />
+                    <om:Property Name="PortName" Value="Port_Apply" />
+                    <om:Property Name="MessageName" Value="Msg_ApplyIn" />
+                    <om:Property Name="OperationName" Value="Apply" />
+                    <om:Property Name="OperationMessageName" Value="Request" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Receive_Apply" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="Construct" OID="9eb8ceb2-b9b5-4fb5-af39-2e2e6d785c27" ParentLink="ServiceBody_Statement" LowerBound="54.1" HigherBound="60.1">
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="ConstructMessage_Apply" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="Transform" OID="7fb2c34d-d567-4e9f-ad83-93e5afbb8dcc" ParentLink="ComplexStatement_Statement" LowerBound="57.1" HigherBound="59.1">
+                        <om:Property Name="ClassName" Value="ScootAceHT.MapApplyIn2File" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Transform_Apply" />
+                        <om:Property Name="Signal" Value="True" />
+                        <om:Element Type="MessagePartRef" OID="7aa6a1e6-5210-474f-b876-0c27ae78c7dd" ParentLink="Transform_InputMessagePartRef" LowerBound="58.74" HigherBound="58.85">
+                            <om:Property Name="MessageRef" Value="Msg_ApplyIn" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="MessagePartReference_1" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                        <om:Element Type="MessagePartRef" OID="3f26b13b-0757-46bc-a5c8-bdaea4c285a0" ParentLink="Transform_OutputMessagePartRef" LowerBound="58.28" HigherBound="58.42">
+                            <om:Property Name="MessageRef" Value="Msg_ApplyTrans" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="MessagePartReference_2" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                    </om:Element>
+                    <om:Element Type="MessageRef" OID="f6db818a-8aac-4305-b673-b807ea2f5392" ParentLink="Construct_MessageRef" LowerBound="55.23" HigherBound="55.37">
+                        <om:Property Name="Ref" Value="Msg_ApplyTrans" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="Decision" OID="27502a83-7953-4681-8149-80d54b78f269" ParentLink="ServiceBody_Statement" LowerBound="60.1" HigherBound="169.1">
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Decide_ChkUsrPwd" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="DecisionBranch" OID="9e0f2a7f-ed94-440d-980b-607ec2435246" ParentLink="ReallyComplexStatement_Branch" LowerBound="61.13" HigherBound="160.1">
+                        <om:Property Name="Expression" Value="(Msg_ApplyTrans.SaleInfo.UserName == &quot;aceif&quot; &amp;&amp; Msg_ApplyTrans.SaleInfo.Password==&quot;ace.interface&quot;)&#xD;&#xA;&#xD;&#xA;" />
+                        <om:Property Name="IsGhostBranch" Value="True" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Rule_OK" />
+                        <om:Property Name="Signal" Value="False" />
+                        <om:Element Type="Construct" OID="4c526cb1-a015-4079-86db-541a25e275b3" ParentLink="ComplexStatement_Statement" LowerBound="64.1" HigherBound="85.1">
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="ConstructMessage_toFile" />
+                            <om:Property Name="Signal" Value="True" />
+                            <om:Element Type="MessageAssignment" OID="126854d6-e971-486f-9ce9-8b086f6d1dda" ParentLink="ComplexStatement_Statement" LowerBound="67.1" HigherBound="84.1">
+                                <om:Property Name="Expression" Value="//Remove ns0 and namesplace&#xD;&#xA;Msg_XmlFile=Msg_ApplyTrans;&#xD;&#xA;&#xD;&#xA;VarString=Msg_XmlFile.OuterXml;&#xD;&#xA;&#xD;&#xA;VarString= &quot;&lt;?xml version=\&quot;1.0\&quot; encoding=\&quot;UTF-8\&quot;?&gt;&quot; + VarString;&#xD;&#xA;//VarString= VarString.Replace(&quot;&lt;ns0:&quot;,&quot;&lt;&quot;);&#xD;&#xA;//VarString= VarString.Replace(&quot;xmlns:ns0=\&quot;http://ScootAceHT.SchIssue2File.eTaiWa\&quot;&quot;,&quot;&quot;);&#xD;&#xA;//VarString= VarString.Replace(&quot;&lt;/ns0:&quot;,&quot;&lt;/&quot;);&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;Msg_XmlFile.LoadXml(VarString);&#xD;&#xA;&#xD;&#xA;//Define filename as PolicyNo&#xD;&#xA;Msg_XmlFile(FILE.ReceivedFileName)=Msg_ApplyTrans.General.AceNo;&#xD;&#xA;&#xD;&#xA;" />
+                                <om:Property Name="ReportToAnalyst" Value="False" />
+                                <om:Property Name="Name" Value="MessageAssignment_toFile" />
+                                <om:Property Name="Signal" Value="True" />
+                            </om:Element>
+                            <om:Element Type="MessageRef" OID="a665ff6c-562f-4a6f-bfe1-f1b1ca907999" ParentLink="Construct_MessageRef" LowerBound="65.27" HigherBound="65.38">
+                                <om:Property Name="Ref" Value="Msg_XmlFile" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Signal" Value="False" />
+                            </om:Element>
+                        </om:Element>
+                        <om:Element Type="Send" OID="2938c1ba-dd0f-4a17-bda2-07b136440724" ParentLink="ComplexStatement_Statement" LowerBound="85.1" HigherBound="87.1">
+                            <om:Property Name="PortName" Value="Port_XmlFile" />
+                            <om:Property Name="MessageName" Value="Msg_XmlFile" />
+                            <om:Property Name="OperationName" Value="SaveXML" />
+                            <om:Property Name="OperationMessageName" Value="Request" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Send_2File" />
+                            <om:Property Name="Signal" Value="True" />
+                        </om:Element>
+                        <om:Element Type="Construct" OID="ba7abf50-cd63-44db-9bed-a62dbcb8ef42" ParentLink="ComplexStatement_Statement" LowerBound="87.1" HigherBound="151.1">
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="ConstructMessage_Email" />
+                            <om:Property Name="Signal" Value="True" />
+                            <om:Element Type="MessageAssignment" OID="7bec3624-aee2-486f-b9c4-9a2db096e029" ParentLink="ComplexStatement_Statement" LowerBound="90.1" HigherBound="150.1">
+                                <om:Property Name="Expression" Value="//&#xD;&#xA;VarEmail =&#xD;&#xA;@&quot;&#xD;&#xA;感谢投保太桦保险。&#xD;&#xA;&#xD;&#xA;您的保单号码为[{0}]，请从以下地址下载电子保单；&#xD;&#xA;{1}&#xD;&#xA;&#xD;&#xA;了解保险详情，请查看保险条款 {2} 。&#xD;&#xA;&#xD;&#xA;如您需要进一步的协助， 请致电我们的客户服务专员热线：&#xD;&#xA;热线号码： 4006095509 （7*24小时）&#xD;&#xA;&#xD;&#xA;感谢您对太桦的信任和支持， 希望在今后能继续为您提供服务。&#xD;&#xA;&#xD;&#xA;请将以下号码存在您的手机上。24 小时紧急援助热线 +86 10 51295700&#xD;&#xA;当您在国外需要紧急援助或救援时并已经购买了太桦境外旅行人身意外伤害保险产品，请拨打此号码。 您可以告诉接线生由太桦支付这个电话费。 &#xD;&#xA;&#xD;&#xA;您真诚的&#xD;&#xA;太桦财产保险有限公司&#xD;&#xA;&#xD;&#xA;这是一个电脑自动生成的信函，请不要直接回复。&#xD;&#xA;&#xD;&#xA;Thank you for insuring with TaiWa.&#xD;&#xA;&#xD;&#xA;Your policy number is [{0}].  Please refer to this link to download the policy certificate: &#xD;&#xA;{1}&#xD;&#xA;&#xD;&#xA;For more information, please see the Policy Wording: {2} .  &#xD;&#xA;&#xD;&#xA;Should you require further assistance, please contact our friendly Customer Relations Officer at &#xD;&#xA;Hotline: 4006095509 (7 days*24-hour)&#xD;&#xA;&#xD;&#xA;Thank you for your trust and support in TaiWa, We look forward to serving you in future.&#xD;&#xA;&#xD;&#xA;Please save this number in your mobile phone.&#xD;&#xA;24 Hours Emergency Hotline: +86 10 51295700&#xD;&#xA;Please call when you are overseas and need assistance under the TaiWa Overseas Travel Insurance Plans.&#xD;&#xA;Please ask the service representative to reverse the overseas charge on the call to TaiWa  &#xD;&#xA;&#xD;&#xA;Yours sincerely,&#xD;&#xA;TaiWa Property &amp; Casualty Insurance Co., Ltd&#xD;&#xA;&#xD;&#xA;This is a computer generated letter and please do not reply directly.&#xD;&#xA;&#xD;&#xA;&quot;;&#xD;&#xA;&#xD;&#xA;VarEmail = System.String.Format(VarEmail,Msg_ApplyTrans.General.PolicyNo,Msg_ApplyTrans.General.PdfUrl,@&quot;http://t.cn/RhsIADh&quot;);&#xD;&#xA;&#xD;&#xA;Msg_Email = Msg_ApplyTrans;&#xD;&#xA;Port_Email(Microsoft.XLANGs.BaseTypes.Address)=@&quot;mailto:&quot;+Msg_ApplyTrans.Applicant.ApplicantEmail;&#xD;&#xA;Msg_Email(SMTP.EmailBodyTextCharset)=&quot;UTF-8&quot;;&#xD;&#xA;Msg_Email(SMTP.Subject) = &quot;太桦保险投保确认邮件 TaiWa Insurance new policy information&quot;;&#xD;&#xA;Msg_Email(SMTP.EmailBodyText)=VarEmail;&#xD;&#xA;Msg_Email(SMTP.From) = &quot;pi_ace_commerce@eTaiWa.com&quot;;&#xD;&#xA;Msg_Email(SMTP.SMTPHost) = &quot;local.mail.eTaiWa.com&quot;;&#xD;&#xA;Msg_Email(SMTP.Username) = &quot;pi_ace_commerce&quot;;&#xD;&#xA;Msg_Email(SMTP.Password) = &quot;MHNofYs2&quot;;&#xD;&#xA;Msg_Email(SMTP.SMTPAuthenticate) = 0;" />
+                                <om:Property Name="ReportToAnalyst" Value="False" />
+                                <om:Property Name="Name" Value="MessageAssignment_Email" />
+                                <om:Property Name="Signal" Value="True" />
+                            </om:Element>
+                            <om:Element Type="MessageRef" OID="7e96fbf8-4e42-4c17-8443-4bfc8a010d44" ParentLink="Construct_MessageRef" LowerBound="88.27" HigherBound="88.36">
+                                <om:Property Name="Ref" Value="Msg_Email" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Signal" Value="False" />
+                            </om:Element>
+                        </om:Element>
+                        <om:Element Type="Send" OID="43798253-e664-4540-9ccd-3eed3ce50b5a" ParentLink="ComplexStatement_Statement" LowerBound="151.1" HigherBound="153.1">
+                            <om:Property Name="PortName" Value="Port_Email" />
+                            <om:Property Name="MessageName" Value="Msg_Email" />
+                            <om:Property Name="OperationName" Value="SendEmail" />
+                            <om:Property Name="OperationMessageName" Value="Request" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="Send_Email" />
+                            <om:Property Name="Signal" Value="True" />
+                        </om:Element>
+                        <om:Element Type="Construct" OID="2b9a1195-b66f-4612-9ae6-1174a61ecea6" ParentLink="ComplexStatement_Statement" LowerBound="153.1" HigherBound="159.1">
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="ConstructMessage_IssueResponse" />
+                            <om:Property Name="Signal" Value="True" />
+                            <om:Element Type="Transform" OID="98025a8b-647b-4ae1-abe7-1a9d38dae5cd" ParentLink="ComplexStatement_Statement" LowerBound="156.1" HigherBound="158.1">
+                                <om:Property Name="ClassName" Value="ScootAceHT.MapApplyResponse" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Name" Value="Transform_IssueResponse" />
+                                <om:Property Name="Signal" Value="False" />
+                                <om:Element Type="MessagePartRef" OID="c23d48f6-0e66-4e37-8db7-43876956598b" ParentLink="Transform_InputMessagePartRef" LowerBound="157.82" HigherBound="157.96">
+                                    <om:Property Name="MessageRef" Value="Msg_ApplyTrans" />
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Name" Value="MessagePartReference_3" />
+                                    <om:Property Name="Signal" Value="False" />
+                                </om:Element>
+                                <om:Element Type="MessagePartRef" OID="5d074134-46eb-4a26-bec7-48f916b2fa19" ParentLink="Transform_OutputMessagePartRef" LowerBound="157.32" HigherBound="157.49">
+                                    <om:Property Name="MessageRef" Value="Msg_IssueResponse" />
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Name" Value="MessagePartReference_4" />
+                                    <om:Property Name="Signal" Value="False" />
+                                </om:Element>
+                            </om:Element>
+                            <om:Element Type="MessageRef" OID="14b53f75-5d05-489d-bf82-ea62e188e603" ParentLink="Construct_MessageRef" LowerBound="154.27" HigherBound="154.44">
+                                <om:Property Name="Ref" Value="Msg_IssueResponse" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Signal" Value="False" />
+                            </om:Element>
+                        </om:Element>
+                    </om:Element>
+                    <om:Element Type="DecisionBranch" OID="3cd4a7d2-753f-4119-ac72-d37faf22099c" ParentLink="ReallyComplexStatement_Branch">
+                        <om:Property Name="IsGhostBranch" Value="True" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="Else" />
+                        <om:Property Name="Signal" Value="False" />
+                        <om:Element Type="Construct" OID="59c1455d-4dae-46da-a352-447cc24b2097" ParentLink="ComplexStatement_Statement" LowerBound="162.1" HigherBound="168.1">
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="ConstructMessage_ApplyError" />
+                            <om:Property Name="Signal" Value="True" />
+                            <om:Element Type="Transform" OID="801b7cac-ce83-49c1-b95d-e6759ad23ca3" ParentLink="ComplexStatement_Statement" LowerBound="165.1" HigherBound="167.1">
+                                <om:Property Name="ClassName" Value="ScootAceHT.MapApplyError" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Name" Value="Transform_ApplyError" />
+                                <om:Property Name="Signal" Value="False" />
+                                <om:Element Type="MessagePartRef" OID="a012e0df-b380-4f07-a5ed-eb96cf931806" ParentLink="Transform_InputMessagePartRef" LowerBound="166.79" HigherBound="166.93">
+                                    <om:Property Name="MessageRef" Value="Msg_ApplyTrans" />
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Name" Value="MessagePartReference_5" />
+                                    <om:Property Name="Signal" Value="False" />
+                                </om:Element>
+                                <om:Element Type="MessagePartRef" OID="0263e4cd-fed2-451e-b9d2-4d06a2e27e0b" ParentLink="Transform_OutputMessagePartRef" LowerBound="166.32" HigherBound="166.49">
+                                    <om:Property Name="MessageRef" Value="Msg_IssueResponse" />
+                                    <om:Property Name="ReportToAnalyst" Value="True" />
+                                    <om:Property Name="Name" Value="MessagePartReference_6" />
+                                    <om:Property Name="Signal" Value="False" />
+                                </om:Element>
+                            </om:Element>
+                            <om:Element Type="MessageRef" OID="c045fb2b-bafb-4f0d-960e-118e44b27a29" ParentLink="Construct_MessageRef" LowerBound="163.27" HigherBound="163.44">
+                                <om:Property Name="Ref" Value="Msg_IssueResponse" />
+                                <om:Property Name="ReportToAnalyst" Value="True" />
+                                <om:Property Name="Signal" Value="False" />
+                            </om:Element>
+                        </om:Element>
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="Send" OID="7640d259-7815-4478-9d36-15ccaf678a2b" ParentLink="ServiceBody_Statement" LowerBound="169.1" HigherBound="171.1">
+                    <om:Property Name="PortName" Value="Port_Apply" />
+                    <om:Property Name="MessageName" Value="Msg_IssueResponse" />
+                    <om:Property Name="OperationName" Value="Apply" />
+                    <om:Property Name="OperationMessageName" Value="Response" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Send_Out" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="bc04665a-de8e-4c85-8fda-55d3fb56cb33" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="35.1" HigherBound="37.1">
+                <om:Property Name="PortModifier" Value="Uses" />
+                <om:Property Name="Orientation" Value="Right" />
+                <om:Property Name="PortIndex" Value="34" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="ScootAceHT.PortType_Email" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Port_Email" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="PhysicalBindingAttribute" OID="a2d54d8e-d565-47f9-b21e-098961e13814" ParentLink="PortDeclaration_CLRAttribute" LowerBound="35.1" HigherBound="36.1">
+                    <om:Property Name="InPipeline" Value="Microsoft.BizTalk.DefaultPipelines.XMLReceive" />
+                    <om:Property Name="OutPipeline" Value="Microsoft.BizTalk.DefaultPipelines.XMLTransmit" />
+                    <om:Property Name="TransportType" Value="HTTP" />
+                    <om:Property Name="URI" Value="http://tempURI" />
+                    <om:Property Name="IsDynamic" Value="True" />
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="ff7b0b91-2a43-4ff5-9116-c99ac8b17ed4" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="37.1" HigherBound="39.1">
+                <om:Property Name="PortModifier" Value="Implements" />
+                <om:Property Name="Orientation" Value="Left" />
+                <om:Property Name="PortIndex" Value="3" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="ScootAceHT.PortType_Apply" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Port_Apply" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="LogicalBindingAttribute" OID="41047c09-95de-4afc-bc31-a7ba924b6e65" ParentLink="PortDeclaration_CLRAttribute" LowerBound="37.1" HigherBound="38.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="6f95cd56-5638-478b-b460-127d132c7bd5" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="39.1" HigherBound="41.1">
+                <om:Property Name="PortModifier" Value="Uses" />
+                <om:Property Name="Orientation" Value="Right" />
+                <om:Property Name="PortIndex" Value="22" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="ScootAceHT.PortType_XmlFile" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Port_XmlFile" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="LogicalBindingAttribute" OID="0372b509-064d-427f-a7bf-d786020028ef" ParentLink="PortDeclaration_CLRAttribute" LowerBound="39.1" HigherBound="40.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+    </om:Element>
+</om:MetaModel>
+#endif // __DESIGNER_DATA
+[Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+module ScootAceHT
+{
+    public porttype PortType_2File
+    {
+        oneway SaveXMLFile
+        {
+            SchIssue2File
+        };
+    };
+    public porttype PortType_Email
+    {
+        oneway SendEmail
+        {
+            SchIssue2File
+        };
+    };
+    public porttype PortType_Apply
+    {
+        requestresponse Apply
+        {
+            SchIssueIn, SchIssueResponse
+        };
+    };
+    public porttype PortType_XmlFile
+    {
+        oneway SaveXML
+        {
+            System.Xml.XmlDocument
+        };
+    };
+    [Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+    internal service OrchApply
+    {
+        [Microsoft.XLANGs.BaseTypes.PhysicalBinding(typeof(Microsoft.BizTalk.DefaultPipelines.XMLTransmit))]
+        port uses dynamic PortType_Email Port_Email;
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port implements PortType_Apply Port_Apply;
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port uses PortType_XmlFile Port_XmlFile;
+        message SchIssueIn Msg_ApplyIn;
+        message SchIssue2File Msg_ApplyTrans;
+        message SchIssue2File Msg_Email;
+        message SchIssueResponse Msg_IssueResponse;
+        message System.Xml.XmlDocument Msg_XmlFile;
+        System.String VarEmail;
+        System.String VarString;
+        body ()
+        {
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("c76d0301-3435-4cbe-9d3e-b19dc48bad12")]
+            activate receive (Port_Apply.Apply, Msg_ApplyIn);
+            VarEmail = "";
+            VarString = "";
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("9eb8ceb2-b9b5-4fb5-af39-2e2e6d785c27")]
+            construct Msg_ApplyTrans
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("7fb2c34d-d567-4e9f-ad83-93e5afbb8dcc")]
+                transform (Msg_ApplyTrans) = ScootAceHT.MapApplyIn2File (Msg_ApplyIn);
+            }
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("27502a83-7953-4681-8149-80d54b78f269")]
+            if ((Msg_ApplyTrans.SaleInfo.UserName == "aceif" && Msg_ApplyTrans.SaleInfo.Password=="ace.interface")
+                )
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("4c526cb1-a015-4079-86db-541a25e275b3")]
+                construct Msg_XmlFile
+                {
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("126854d6-e971-486f-9ce9-8b086f6d1dda")]
+                    //Remove ns0 and namesplace
+                    Msg_XmlFile=Msg_ApplyTrans;
+                    
+                    VarString=Msg_XmlFile.OuterXml;
+                    
+                    VarString= "<?xml version=\"1.0\" encoding=\"UTF-8\"?>" + VarString;
+                    //VarString= VarString.Replace("<ns0:","<");
+                    //VarString= VarString.Replace("xmlns:ns0=\"http://ScootAceHT.SchIssue2File.eTaiWa\"","");
+                    //VarString= VarString.Replace("</ns0:","</");
+                    
+                    
+                    Msg_XmlFile.LoadXml(VarString);
+                    
+                    //Define filename as PolicyNo
+                    Msg_XmlFile(FILE.ReceivedFileName)=Msg_ApplyTrans.General.AceNo;
+                    
+                }
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("2938c1ba-dd0f-4a17-bda2-07b136440724")]
+                send (Port_XmlFile.SaveXML, Msg_XmlFile);
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("ba7abf50-cd63-44db-9bed-a62dbcb8ef42")]
+                construct Msg_Email
+                {
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("7bec3624-aee2-486f-b9c4-9a2db096e029")]
+                    //
+                    VarEmail =
+                    @"
+                    感谢投保太桦保险。
+                    
+                    您的保单号码为[{0}]，请从以下地址下载电子保单；
+                    {1}
+                    
+                    了解保险详情，请查看保险条款 {2} 。
+                    
+                    如您需要进一步的协助， 请致电我们的客户服务专员热线：
+                    热线号码： 4006095509 （7*24小时）
+                    
+                    感谢您对太桦的信任和支持， 希望在今后能继续为您提供服务。
+                    
+                    请将以下号码存在您的手机上。24 小时紧急援助热线 +86 10 51295700
+                    当您在国外需要紧急援助或救援时并已经购买了太桦境外旅行人身意外伤害保险产品，请拨打此号码。 您可以告诉接线生由太桦支付这个电话费。 
+                    
+                    您真诚的
+                    太桦财产保险有限公司
+                    
+                    这是一个电脑自动生成的信函，请不要直接回复。
+                    
+                    Thank you for insuring with TaiWa.
+                    
+                    Your policy number is [{0}].  Please refer to this link to download the policy certificate: 
+                    {1}
+                    
+                    For more information, please see the Policy Wording: {2} .  
+                    
+                    Should you require further assistance, please contact our friendly Customer Relations Officer at 
+                    Hotline: 4006095509 (7 days*24-hour)
+                    
+                    Thank you for your trust and support in TaiWa, We look forward to serving you in future.
+                    
+                    Please save this number in your mobile phone.
+                    24 Hours Emergency Hotline: +86 10 51295700
+                    Please call when you are overseas and need assistance under the TaiWa Overseas Travel Insurance Plans.
+                    Please ask the service representative to reverse the overseas charge on the call to TaiWa  
+                    
+                    Yours sincerely,
+                    TaiWa Property & Casualty Insurance Co., Ltd
+                    
+                    This is a computer generated letter and please do not reply directly.
+                    
+                    ";
+                    
+                    VarEmail = System.String.Format(VarEmail,Msg_ApplyTrans.General.PolicyNo,Msg_ApplyTrans.General.PdfUrl,@"http://t.cn/RhsIADh");
+                    
+                    Msg_Email = Msg_ApplyTrans;
+                    Port_Email(Microsoft.XLANGs.BaseTypes.Address)=@"mailto:"+Msg_ApplyTrans.Applicant.ApplicantEmail;
+                    Msg_Email(SMTP.EmailBodyTextCharset)="UTF-8";
+                    Msg_Email(SMTP.Subject) = "太桦保险投保确认邮件 TaiWa Insurance new policy information";
+                    Msg_Email(SMTP.EmailBodyText)=VarEmail;
+                    Msg_Email(SMTP.From) = "pi_ace_commerce@eTaiWa.com";
+                    Msg_Email(SMTP.SMTPHost) = "local.mail.eTaiWa.com";
+                    Msg_Email(SMTP.Username) = "pi_ace_commerce";
+                    Msg_Email(SMTP.Password) = "MHNofYs2";
+                    Msg_Email(SMTP.SMTPAuthenticate) = 0;
+                }
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("43798253-e664-4540-9ccd-3eed3ce50b5a")]
+                send (Port_Email.SendEmail, Msg_Email);
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("2b9a1195-b66f-4612-9ae6-1174a61ecea6")]
+                construct Msg_IssueResponse
+                {
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("98025a8b-647b-4ae1-abe7-1a9d38dae5cd")]
+                    transform (Msg_IssueResponse) = ScootAceHT.MapApplyResponse (Msg_ApplyTrans);
+                }
+            }
+            else 
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("59c1455d-4dae-46da-a352-447cc24b2097")]
+                construct Msg_IssueResponse
+                {
+                    [Microsoft.XLANGs.BaseTypes.DesignerPosition("801b7cac-ce83-49c1-b95d-e6759ad23ca3")]
+                    transform (Msg_IssueResponse) = ScootAceHT.MapApplyError (Msg_ApplyTrans);
+                }
+            }
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("7640d259-7815-4478-9d36-15ccaf678a2b")]
+            send (Port_Apply.Apply, Msg_IssueResponse);
+        }
+    }
+}
+

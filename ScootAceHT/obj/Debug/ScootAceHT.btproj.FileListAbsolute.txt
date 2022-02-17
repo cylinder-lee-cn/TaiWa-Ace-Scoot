@@ -1,0 +1,4 @@
+F:\Bts Projects\ScootAceHT\ScootAceHT\bin\Debug\ScootAceHT.dll
+F:\Bts Projects\ScootAceHT\ScootAceHT\bin\Debug\ScootAceHT.pdb
+F:\Bts Projects\ScootAceHT\ScootAceHT\obj\Debug\ScootAceHT.dll
+F:\Bts Projects\ScootAceHT\ScootAceHT\obj\Debug\ScootAceHT.pdb
